@@ -9,7 +9,7 @@ public class Main {
 
 
         Doit doit = new Doit();
-        Thread[] threads = new Thread[5];
+        Thread[] threads = new Thread[1];
 
         for(int i=0; i<threads.length; i++) {
             int a = i;

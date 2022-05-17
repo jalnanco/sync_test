@@ -24,4 +24,18 @@ public class SeqsDao {
         }
         return list;
     }
+
+    public String insertSeqsInfo(Seqs seqs) {
+
+        String result = null;
+        SqlSession session = sqlSessionFactory.openSession();
+
+        try {
+            session.insert("Seqs.insertSeqsInfo", seqs);
+        } finally {
+            session.commit();
+            session.close();
+        }
+        return result;
+    }
 }
