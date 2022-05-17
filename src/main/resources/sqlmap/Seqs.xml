@@ -6,9 +6,9 @@
 <mapper namespace="Seqs">
 
     <resultMap id="result" type="Seqs">
-        <result property="SEQS_NO" column="SEQS_NO"/>
-        <result property="SEQS_TP" column="SEQS_TP"/>
-        <result property="SEQS_DT" column="SEQS_DT"/>
+        <result property="seqsNo" column="SEQS_NO"/>
+        <result property="seqsTp" column="SEQS_TP"/>
+        <result property="seqsDt" column="SEQS_DT"/>
     </resultMap>
 
     <select id="selectAll" resultMap="result">
