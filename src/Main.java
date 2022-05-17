@@ -9,23 +9,17 @@ public class Main {
 
 
         Doit doit = new Doit();
+        Thread[] threads = new Thread[5];
 
-        Thread thread1 = new Thread( () -> { doit.run("T1");});
-        Thread thread2 = new Thread( () -> { doit.run("T2");});
-//        Thread thread3 = new Thread( () -> { doit.run("T3");});
-//        Thread thread4 = new Thread( () -> { doit.run("T4");});
-//        Thread thread5 = new Thread( () -> { doit.run("T5");});
-//        Thread thread6 = new Thread( () -> { doit.run("T6");});
-//        Thread thread7 = new Thread( () -> { doit.run("T7");});
-//        Thread thread8 = new Thread( () -> { doit.run("T8");});
-//
-        thread1.start();
-        thread2.start();
-//        thread3.start();
-//        thread4.start();
-//        thread5.start();
-//        thread6.start();
-//        thread7.start();
-//        thread8.start();
+        for(int i=0; i<threads.length; i++) {
+            int a = i;
+            threads[i] = new Thread(() -> {
+                doit.run("T" + a);
+            });
+        }
+
+        for(int i=0; i< threads.length; i++) {
+            threads[i].start();
+        }
     }
 }
