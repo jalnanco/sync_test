@@ -1,4 +1,4 @@
-# Syncronized 와 for update문을 이용한 Deadlock 만들기
+# Syncronized 와 MYSQL FORUPDATE 문을 이용한 Deadlock 만들기
 
 ## 준비
 
